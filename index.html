@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./plugin/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="./plugin/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="./plugin/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="./plugin/bootstrap-3.3.7/js/bootstrap.js" charset="utf-8"></script>
+    <!-- <script src="./plugin/vue.js" charset="utf-8"></script> -->
+    <title>首页</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li> -->
+              <li v-for="item in MenuList" id = "hr">
+                <a href="#">{{item}}</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <aside class="nav">
+
+    </aside>
+
+    <section>
+
+    </section>
+
+    <footer>
+
+    </footer>
+    <script type="text/javascript">
+function test(){
+  $.get({
+    url:'http://127.0.0.1:8080/ssh/test/test',
+    success:function(json){
+      alert('test');
+      alert(json);
+    },
+    type:'json'
+  });
+};
+
+$('#hr').click(function(){
+  alert('test');
+  test();
+});
+
+      // new Vue({
+      //   el:'nav',
+      //   data:{
+      //     MenuList:['人事管理']
+      //   },
+      //   methods:{
+      //     test:function(){
+      //       //alert('test');
+      //
+      //     }
+      //   }
+      // });
+    </script>
+  </body>
+</html>
