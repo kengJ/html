@@ -1,0 +1,101 @@
+body{
+  background: rgb(62, 62, 62);
+
+    padding: 0;
+    margin: 0;
+}
+.nav > li > a > i{
+  color: rgb(243, 106, 90);
+}
+
+.nav > li > a{
+  padding: 20px;
+}
+
+ul.nav >li{
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#sideNav{
+  display: inline-block;
+  padding: 15px;
+  line-height: 30px;
+}
+.navbar-header > a{
+  background: #F36A5A !important;
+  color: white !important;
+  height: 60px;
+  line-height: 30px;
+  width: 260px;
+  text-align: center;
+  /*padding: 20px;*/
+}
+ul.dropdown-tasks > li > a > div{
+  width: 225px !important;
+}
+
+ul.dropdown-tasks > li > a > div {
+  height: 46px !important;
+}
+
+ul.dropdown-tasks > li > a{
+  padding: 0 15px;
+}
+
+div.progress-striped{
+  height: 8px;
+  border-radius: 0px;
+}
+
+ul.dropdown-alerts > li > a > div{
+    width:190px !important;
+}
+
+ul.dropdown-alerts > li > a > div >span{
+  color: #FB5651;
+}
+.sidebar-collapse li {
+  /*float: left;*/
+  display: block !important;
+}
+nav.navbar-side{
+  width: 260px;
+  background: rgb(62, 62, 62);
+  float: left;
+}
+.top-navbar{
+  margin-bottom: 0px !important;
+}
+nav.navbar-side ul li a,nav.navbar-side ul li a i{
+  color: rgb(184, 184, 184);
+}
+nav.navbar-side ul li a:hover{
+  background: rgb(87, 87, 87) !important;
+  color: #F36A5A !important;
+}
+#main{
+  background: rgb(237, 237, 237);
+}
+
+@media (min-width: 768px){
+  #main {
+      /*margin-left: 260px;*/
+      padding: 0;
+      /*min-height: 768px;*/
+      position: absolute;
+      top: 62px;
+      left: 260px;
+      bottom: 0;
+      right: 0;
+      /*display: inline-block;*/
+      /*width: 768px;*/
+  }
+}
+.clear{
+  clear: both;
+}
+.top-navbar ul{
+  margin-right: 0;
+}
