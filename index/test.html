@@ -7,13 +7,34 @@
   </head>
   <body>
 <div class="test">
-<demo-div v-bind:title="title"></demo-div>
+<demo-div1 v-bind:title="title"></demo-div1>
 </div>
-<script type="text/javascript">
+<div id="vtest">
+  <vv v-bind:test2="test"></vv>
+</div>
+<template id="p">
+  <div class="parent" v-if="view">
+    {{test2}}
+  </div>
+  <c v-if="!view"></c>
+</template>
+<script type="text/x-template" id="t1">
+    <div class="tt">{{title}}</div>
+</script>
+<!-- <script type="text/x-template" id="p">
+  <div class="parent">
+    {{test2}}
+    <c></c>
+  </div>
 
-Vue.component('demo-div',{
+</script> -->
+<script type="text/x-template" id="c">
+  <div class="child">ttt</div>
+</script>
+<script type="text/javascript">
+Vue.component('demo-div1',{
   props:['title'],
-  template:'#testdemo'
+  template:'#t1'
 });
 
 new Vue({
@@ -22,6 +43,25 @@ new Vue({
     message:'message',
     messages:[{name:'test1'},{name:'test2'}],
     title:'test'
+  }
+});
+
+var child = Vue.extend({
+  // props:['test1'],
+  template:'#c'
+});
+Vue.component('vv',{
+template:'#p',
+props:['test2','view'],
+components:{
+  'c':child
+}
+});
+new Vue({
+  el:'#vtest',
+  data:{
+    test:'12345',
+    view:false
   }
 });
 </script>
